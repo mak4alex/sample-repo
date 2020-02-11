@@ -1,4 +1,5 @@
-filename='README.md'
-echo "## Peer-graded Assignment: Bash, Make, Git, and GitHub" > $filename
-echo "Created at: $(date)" >> $filename
-echo "guessinggame.sh contains $(wc -l < guessinggame.sh) lines" >> $filename
+filename=README.md
+readme:
+	echo "## Peer-graded Assignment: Bash, Make, Git, and GitHub" > $(filename)
+	echo "Created at: $(shell date)" >> $(filename)
+	echo "guessinggame.sh contains $(shell wc -l < guessinggame.sh) lines" >> $(filename)
