@@ -1,5 +1,5 @@
 result=0
-file_count=$(ls -a . | wc -l)
+file_count=$(ls --almost-all | wc -l)
 
 validate_number () {
   if [ $1 -gt $file_count ]; then
